@@ -1,10 +1,11 @@
 {
   "manifest_version": 3,
   "name": "AEM Cookie Bridge",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Read Samsung AEM cookies (including HttpOnly) and send them to the Automation app.",
-  "permissions": ["cookies", "tabs"],
+  "permissions": ["cookies", "tabs", "storage", "scripting"],
   "host_permissions": ["*://*.samsung.com/*", "*://samsung.com/*"],
+  "optional_host_permissions": ["http://*/*", "https://*/*"],
   "background": {
     "service_worker": "background.js"
   },
@@ -21,12 +22,5 @@
     "16": "icons/icon16.png",
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
-  },
-  "content_scripts": [
-    {
-      "matches": ["http://automation.samsung.com/*"],
-      "js": ["content.js"],
-      "run_at": "document_idle"
-    }
-  ]
+  }
 }

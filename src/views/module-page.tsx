@@ -1,16 +1,18 @@
-import { Navigate, useParams } from "react-router-dom";
+"use client";
+
+import { redirect, useParams } from "next/navigation";
 import { AutomationPanel } from "@/components/automation-panel";
-import { EmptyModules } from "@/pages/empty-modules";
+import { EmptyModules } from "@/views/empty-modules";
 import { defaultModuleId, getModule } from "@/modules/registry";
 
 export function ModulePage() {
-  const { moduleId } = useParams();
+  const { moduleId } = useParams<{ moduleId: string }>();
   const module = getModule(moduleId);
 
   if (!module) {
     // Unknown id: bounce to the first module, or show the empty state.
     return defaultModuleId ? (
-      <Navigate to={`/module/${defaultModuleId}`} replace />
+      redirect(`/module/${defaultModuleId}`)
     ) : (
       <EmptyModules />
     );

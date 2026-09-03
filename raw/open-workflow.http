@@ -1,0 +1,253 @@
+curl --url ^"https://p6-ap-author.samsung.com/pim/core/workflow/v6/selectcountofinvalidworkflow^" ^
+  -H ^"accept: application/json, text/javascript, */*; q=0.01^" ^
+  -H ^"accept-language: en-US,en;q=0.9^" ^
+  -H ^"cache-control: no-cache^" ^
+  -H ^"content-type: application/x-www-form-urlencoded; charset=UTF-8^" ^
+  -b ^"JSESSIONID=357432FCDD92764831332D0725929549; s_fpid=86503136-7ce3-4c66-9052-d3104cae552c; WMONID=zygWngoBTdS; cq-authoring-mode=TOUCH; cq-sites-pages-pages=list; cq-editor-layer.page=Edit; cq-editor-sidepanel=open; cq-assets-files-files=list; rxVisitorn27vm6tb=1788333676805TDNQ1CH0491K34OSRONL4PULN2CLL6A5; estoreSitecode_cm=sms; estoreSitecode=sg; _abck=866F2298ABED28E8F297AB4A175CE0DD~-1~YAAQZOn7y72h4k2gAQAAklr+YBAxJ9j4eHZ8QwZd4XTKSewA9+RnAVqUiszYHY041FTG5ulWqe6eaRsO/msS5zHdrtg+HfkRdFwDclKIjdDN7fJyjhXTGShmBq36U6gk2MtNER4NaEFbgsxntwlINHTybjyvA9VGjuhUZ++1hZFKNAvZVnjPBFjYMAWoLOF8nidKAhKbcFOTyvJg9EW8nECQsp6QV3GOIdsmZeYbMlLhkYYy6IBekpf3R8IkcvrV17QajTUz4jOV+BPsLmrKG0/X4YAQSVj8qbZ3trITq7KEz4IIVeM5TcXTFU2CnSmB8MmtIn241bBB7KXdYwS2qbV92G/13RvKMU9xNqGbIW0axJw4oRrwWORf5W5v3Mms8CKhZQ1iA5jaPl7Dc0QGpcB5S2T1pBmDXoMMX8alJG8qW72AKw1kCwSnNS7VtjCPqxeBq9SV6Q==~-1~-1~-1~-1~-1; incap_ses_1590_2563519=fNuPXHJ0Vh8v/CsUQtEQFgMrmWoAAAAA92qZEGSNZc9M5A2bJIhXrw==; visid_incap_2563519=v5lkhrXwSxiw+OMibR9Q/liij2oAAAAAS0IPAAAAAACB4U6E13iqst+hdw8rEinM; wcms_enc_user=542b56652edg3061cg1f34221a243a29761e3b28742f7c2c; wcms_user=chau.mpham; login-token=ee45c341-25ed-4542-b07a-e644ed876d43^%^3a58b26ae9-fced-4793-8f10-fe0f2f6278ce_ee4ba440f8fb763c4ae68ea632927244^%^3acrx.default; s_navv=ZetMbigKh38xUc2Pd2NfwO==; P6W_SELECT_SITE=th; AWSALB=nVqT9E6/ACEPC18KLKUdnhwyTqSRzArlsm999T8vZ3G913y3ukR5Ub78ra9HbrbfDqswPbBasCP5Z6maa2siHbhWTZ7GimeYn37Sni49MW3id6bpq7jx9vPHAzEa^" ^
+  -H ^"origin: https://p6-ap-author.samsung.com^" ^
+  -H ^"pragma: no-cache^" ^
+  -H ^"priority: u=0, i^" ^
+  -H ^"referer: https://p6-ap-author.samsung.com/pim/core/workflow/page/updateproductfamily?wftitle=Direct^%^20Update^&wfsubtitle=Please^%^20input^%^20the^%^20work^%^20title^%^20for^%^20direct^%^20update^%^20and^%^20description.^&wfsitecd=th^&wforgreqid=2312507^&wfreqtypecd=DU^&wfreqclasscd=R-FMY-P^&wfhiddent=attachFileListtr,updwtr^&wfdisabled=attachFileList^&wfopcd=O-REQ^&wfaccd=A-REQ^&wfloadurl=/main/product/wfDirectUpdateForm.do^&wfloadparam=workType,siteCode,familyId,familyName,iaEngNamePath,iaCode^&wfloadparamvalue=U,th,460156,WA6000C^%^20Top^%^20load^%^20Washer^%^20with^%^20Ecobubble^%^20and^%^20Digital^%^20Inverter^%^20Technology^%^20and^%^20Bubble^%^20Strom,Home^%^20Appliances^|Washers^%^20and^%^20Dryers^|Washing^%^20Machines,08010100^&wfactionurl=/main/product/wfDirectUpdateProc^&wfparentfn=true^&wfsitecdch=true^&wfopensize=w600^&groupParam=^&typeParam=^&subTypeParam=^&ssubTypeParam=^&iaEngNamePath=Home^%^20Appliances^|Washers^%^20and^%^20Dryers^|Washing^%^20Machines^&marketingName=WA6000C^%^20Top^%^20load^%^20Washer^%^20with^%^20Ecobubble^%^20and^%^20Digital^%^20Inverter^%^20Technology^%^20and^%^20Bubble^%^20Strom^&pageUrl=/th/washers-and-dryers/washing-machines/wa6000c-top-load-ecobubble-digital-inverter-technology-super-speed-17kg-light-gray-wa17cg6441byst/^&displayFlag=Y^&packageFlag=N^&eppDisplayFlag=N^&embargoFlag=undefined^&embargoDt=undefined^&reregistration=0^&^" ^
+  -H ^"sec-ch-ua: ^\^"Not=A?Brand^\^";v=^\^"99^\^", ^\^"Google Chrome^\^";v=^\^"151^\^", ^\^"Chromium^\^";v=^\^"151^\^"^" ^
+  -H ^"sec-ch-ua-mobile: ?0^" ^
+  -H ^"sec-ch-ua-platform: ^\^"Windows^\^"^" ^
+  -H ^"sec-fetch-dest: empty^" ^
+  -H ^"sec-fetch-mode: cors^" ^
+  -H ^"sec-fetch-site: same-origin^" ^
+  -H ^"user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36^" ^
+  -H ^"x-requested-with: XMLHttpRequest^" ^
+  --data-raw ^"siteCode=th^&fmyId=460156^"
+
+curl --url ^"https://p6-ap-author.samsung.com/pim/core/workflow/v6/getnewrequestid^" ^
+  -H ^"accept: application/json, text/javascript, */*; q=0.01^" ^
+  -H ^"accept-language: en-US,en;q=0.9^" ^
+  -H ^"cache-control: no-cache^" ^
+  -H ^"content-type: application/x-www-form-urlencoded; charset=UTF-8^" ^
+  -b ^"JSESSIONID=357432FCDD92764831332D0725929549; s_fpid=86503136-7ce3-4c66-9052-d3104cae552c; WMONID=zygWngoBTdS; cq-authoring-mode=TOUCH; cq-sites-pages-pages=list; cq-editor-layer.page=Edit; cq-editor-sidepanel=open; cq-assets-files-files=list; rxVisitorn27vm6tb=1788333676805TDNQ1CH0491K34OSRONL4PULN2CLL6A5; estoreSitecode_cm=sms; estoreSitecode=sg; _abck=866F2298ABED28E8F297AB4A175CE0DD~-1~YAAQZOn7y72h4k2gAQAAklr+YBAxJ9j4eHZ8QwZd4XTKSewA9+RnAVqUiszYHY041FTG5ulWqe6eaRsO/msS5zHdrtg+HfkRdFwDclKIjdDN7fJyjhXTGShmBq36U6gk2MtNER4NaEFbgsxntwlINHTybjyvA9VGjuhUZ++1hZFKNAvZVnjPBFjYMAWoLOF8nidKAhKbcFOTyvJg9EW8nECQsp6QV3GOIdsmZeYbMlLhkYYy6IBekpf3R8IkcvrV17QajTUz4jOV+BPsLmrKG0/X4YAQSVj8qbZ3trITq7KEz4IIVeM5TcXTFU2CnSmB8MmtIn241bBB7KXdYwS2qbV92G/13RvKMU9xNqGbIW0axJw4oRrwWORf5W5v3Mms8CKhZQ1iA5jaPl7Dc0QGpcB5S2T1pBmDXoMMX8alJG8qW72AKw1kCwSnNS7VtjCPqxeBq9SV6Q==~-1~-1~-1~-1~-1; incap_ses_1590_2563519=fNuPXHJ0Vh8v/CsUQtEQFgMrmWoAAAAA92qZEGSNZc9M5A2bJIhXrw==; visid_incap_2563519=v5lkhrXwSxiw+OMibR9Q/liij2oAAAAAS0IPAAAAAACB4U6E13iqst+hdw8rEinM; wcms_enc_user=542b56652edg3061cg1f34221a243a29761e3b28742f7c2c; wcms_user=chau.mpham; login-token=ee45c341-25ed-4542-b07a-e644ed876d43^%^3a58b26ae9-fced-4793-8f10-fe0f2f6278ce_ee4ba440f8fb763c4ae68ea632927244^%^3acrx.default; s_navv=ZetMbigKh38xUc2Pd2NfwO==; P6W_SELECT_SITE=th; AWSALB=nVqT9E6/ACEPC18KLKUdnhwyTqSRzArlsm999T8vZ3G913y3ukR5Ub78ra9HbrbfDqswPbBasCP5Z6maa2siHbhWTZ7GimeYn37Sni49MW3id6bpq7jx9vPHAzEa^" ^
+  -H ^"origin: https://p6-ap-author.samsung.com^" ^
+  -H ^"pragma: no-cache^" ^
+  -H ^"priority: u=1, i^" ^
+  -H ^"referer: https://p6-ap-author.samsung.com/pim/core/workflow/page/updateproductfamily?wftitle=Direct^%^20Update^&wfsubtitle=Please^%^20input^%^20the^%^20work^%^20title^%^20for^%^20direct^%^20update^%^20and^%^20description.^&wfsitecd=th^&wforgreqid=2312507^&wfreqtypecd=DU^&wfreqclasscd=R-FMY-P^&wfhiddent=attachFileListtr,updwtr^&wfdisabled=attachFileList^&wfopcd=O-REQ^&wfaccd=A-REQ^&wfloadurl=/main/product/wfDirectUpdateForm.do^&wfloadparam=workType,siteCode,familyId,familyName,iaEngNamePath,iaCode^&wfloadparamvalue=U,th,460156,WA6000C^%^20Top^%^20load^%^20Washer^%^20with^%^20Ecobubble^%^20and^%^20Digital^%^20Inverter^%^20Technology^%^20and^%^20Bubble^%^20Strom,Home^%^20Appliances^|Washers^%^20and^%^20Dryers^|Washing^%^20Machines,08010100^&wfactionurl=/main/product/wfDirectUpdateProc^&wfparentfn=true^&wfsitecdch=true^&wfopensize=w600^&groupParam=^&typeParam=^&subTypeParam=^&ssubTypeParam=^&iaEngNamePath=Home^%^20Appliances^|Washers^%^20and^%^20Dryers^|Washing^%^20Machines^&marketingName=WA6000C^%^20Top^%^20load^%^20Washer^%^20with^%^20Ecobubble^%^20and^%^20Digital^%^20Inverter^%^20Technology^%^20and^%^20Bubble^%^20Strom^&pageUrl=/th/washers-and-dryers/washing-machines/wa6000c-top-load-ecobubble-digital-inverter-technology-super-speed-17kg-light-gray-wa17cg6441byst/^&displayFlag=Y^&packageFlag=N^&eppDisplayFlag=N^&embargoFlag=undefined^&embargoDt=undefined^&reregistration=0^&^" ^
+  -H ^"sec-ch-ua: ^\^"Not=A?Brand^\^";v=^\^"99^\^", ^\^"Google Chrome^\^";v=^\^"151^\^", ^\^"Chromium^\^";v=^\^"151^\^"^" ^
+  -H ^"sec-ch-ua-mobile: ?0^" ^
+  -H ^"sec-ch-ua-platform: ^\^"Windows^\^"^" ^
+  -H ^"sec-fetch-dest: empty^" ^
+  -H ^"sec-fetch-mode: cors^" ^
+  -H ^"sec-fetch-site: same-origin^" ^
+  -H ^"user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36^" ^
+  -H ^"x-requested-with: XMLHttpRequest^" ^
+  --data-raw ^"siteCode=th^"
+
+curl --url ^"https://p6-ap-author.samsung.com/pim/core/workflow/v6/startaemdirectworkflow^" ^
+  -H ^"accept: application/json, text/javascript, */*; q=0.01^" ^
+  -H ^"accept-language: en-US,en;q=0.9^" ^
+  -H ^"cache-control: no-cache^" ^
+  -H ^"content-type: multipart/form-data; boundary=----WebKitFormBoundaryuXMM1g2R8hagHxtV^" ^
+  -b ^"JSESSIONID=357432FCDD92764831332D0725929549; s_fpid=86503136-7ce3-4c66-9052-d3104cae552c; WMONID=zygWngoBTdS; cq-authoring-mode=TOUCH; cq-sites-pages-pages=list; cq-editor-layer.page=Edit; cq-editor-sidepanel=open; cq-assets-files-files=list; rxVisitorn27vm6tb=1788333676805TDNQ1CH0491K34OSRONL4PULN2CLL6A5; estoreSitecode_cm=sms; estoreSitecode=sg; _abck=866F2298ABED28E8F297AB4A175CE0DD~-1~YAAQZOn7y72h4k2gAQAAklr+YBAxJ9j4eHZ8QwZd4XTKSewA9+RnAVqUiszYHY041FTG5ulWqe6eaRsO/msS5zHdrtg+HfkRdFwDclKIjdDN7fJyjhXTGShmBq36U6gk2MtNER4NaEFbgsxntwlINHTybjyvA9VGjuhUZ++1hZFKNAvZVnjPBFjYMAWoLOF8nidKAhKbcFOTyvJg9EW8nECQsp6QV3GOIdsmZeYbMlLhkYYy6IBekpf3R8IkcvrV17QajTUz4jOV+BPsLmrKG0/X4YAQSVj8qbZ3trITq7KEz4IIVeM5TcXTFU2CnSmB8MmtIn241bBB7KXdYwS2qbV92G/13RvKMU9xNqGbIW0axJw4oRrwWORf5W5v3Mms8CKhZQ1iA5jaPl7Dc0QGpcB5S2T1pBmDXoMMX8alJG8qW72AKw1kCwSnNS7VtjCPqxeBq9SV6Q==~-1~-1~-1~-1~-1; incap_ses_1590_2563519=fNuPXHJ0Vh8v/CsUQtEQFgMrmWoAAAAA92qZEGSNZc9M5A2bJIhXrw==; visid_incap_2563519=v5lkhrXwSxiw+OMibR9Q/liij2oAAAAAS0IPAAAAAACB4U6E13iqst+hdw8rEinM; wcms_enc_user=542b56652edg3061cg1f34221a243a29761e3b28742f7c2c; wcms_user=chau.mpham; login-token=ee45c341-25ed-4542-b07a-e644ed876d43^%^3a58b26ae9-fced-4793-8f10-fe0f2f6278ce_ee4ba440f8fb763c4ae68ea632927244^%^3acrx.default; s_navv=ZetMbigKh38xUc2Pd2NfwO==; P6W_SELECT_SITE=th; AWSALB=nVqT9E6/ACEPC18KLKUdnhwyTqSRzArlsm999T8vZ3G913y3ukR5Ub78ra9HbrbfDqswPbBasCP5Z6maa2siHbhWTZ7GimeYn37Sni49MW3id6bpq7jx9vPHAzEa^" ^
+  -H ^"origin: https://p6-ap-author.samsung.com^" ^
+  -H ^"pragma: no-cache^" ^
+  -H ^"priority: u=1, i^" ^
+  -H ^"referer: https://p6-ap-author.samsung.com/pim/core/workflow/page/updateproductfamily?wftitle=Direct^%^20Update^&wfsubtitle=Please^%^20input^%^20the^%^20work^%^20title^%^20for^%^20direct^%^20update^%^20and^%^20description.^&wfsitecd=th^&wforgreqid=2312507^&wfreqtypecd=DU^&wfreqclasscd=R-FMY-P^&wfhiddent=attachFileListtr,updwtr^&wfdisabled=attachFileList^&wfopcd=O-REQ^&wfaccd=A-REQ^&wfloadurl=/main/product/wfDirectUpdateForm.do^&wfloadparam=workType,siteCode,familyId,familyName,iaEngNamePath,iaCode^&wfloadparamvalue=U,th,460156,WA6000C^%^20Top^%^20load^%^20Washer^%^20with^%^20Ecobubble^%^20and^%^20Digital^%^20Inverter^%^20Technology^%^20and^%^20Bubble^%^20Strom,Home^%^20Appliances^|Washers^%^20and^%^20Dryers^|Washing^%^20Machines,08010100^&wfactionurl=/main/product/wfDirectUpdateProc^&wfparentfn=true^&wfsitecdch=true^&wfopensize=w600^&groupParam=^&typeParam=^&subTypeParam=^&ssubTypeParam=^&iaEngNamePath=Home^%^20Appliances^|Washers^%^20and^%^20Dryers^|Washing^%^20Machines^&marketingName=WA6000C^%^20Top^%^20load^%^20Washer^%^20with^%^20Ecobubble^%^20and^%^20Digital^%^20Inverter^%^20Technology^%^20and^%^20Bubble^%^20Strom^&pageUrl=/th/washers-and-dryers/washing-machines/wa6000c-top-load-ecobubble-digital-inverter-technology-super-speed-17kg-light-gray-wa17cg6441byst/^&displayFlag=Y^&packageFlag=N^&eppDisplayFlag=N^&embargoFlag=undefined^&embargoDt=undefined^&reregistration=0^&^" ^
+  -H ^"sec-ch-ua: ^\^"Not=A?Brand^\^";v=^\^"99^\^", ^\^"Google Chrome^\^";v=^\^"151^\^", ^\^"Chromium^\^";v=^\^"151^\^"^" ^
+  -H ^"sec-ch-ua-mobile: ?0^" ^
+  -H ^"sec-ch-ua-platform: ^\^"Windows^\^"^" ^
+  -H ^"sec-fetch-dest: empty^" ^
+  -H ^"sec-fetch-mode: cors^" ^
+  -H ^"sec-fetch-site: same-origin^" ^
+  -H ^"user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36^" ^
+  -H ^"x-requested-with: XMLHttpRequest^" ^
+  --data-raw ^"------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"redirectUrl^\^"^
+
+^
+
+^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"today^\^"^
+
+^
+
+2026-09-03^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"displayFlag^\^"^
+
+^
+
+Y^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"eppDisplayFlag^\^"^
+
+^
+
+N^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"displayNoType^\^"^
+
+^
+
+P^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"inputRedirectUrl^\^"^
+
+^
+
+^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"inputRedirectUrl^\^"^
+
+^
+
+^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"requestContent^\^"^
+
+^
+
+Test WSC20200018-32262^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"publishingRequestTicketNum^\^"^
+
+^
+
+WSC20200018-32262^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"siteCode^\^"^
+
+^
+
+th^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"fmyId^\^"^
+
+^
+
+460156^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"requestId^\^"^
+
+^
+
+2320111^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"requestDate^\^"^
+
+^
+
+2026-09-03^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"workType^\^"^
+
+^
+
+DU^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"requestClassCode^\^"^
+
+^
+
+R-FMY-P^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"processType^\^"^
+
+^
+
+DM^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"requestTitle^\^"^
+
+^
+
+^[th^] WA6000C Top load Washer with Ecobubble and Digital Inverter Technology and Bubble Strom / Product / Direct Update / ^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"requestDesc^\^"^
+
+^
+
+Test WSC20200018-32262^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"pageUrl^\^"^
+
+^
+
+/th/washers-and-dryers/washing-machines/wa6000c-top-load-ecobubble-digital-inverter-technology-super-speed-17kg-light-gray-wa17cg6441byst/^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"dueDate^\^"^
+
+^
+
+2026-09-03^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"priority^\^"^
+
+^
+
+^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"iaCode^\^"^
+
+^
+
+08010100^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"embargoFlag^\^"^
+
+^
+
+undefined^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV^
+
+Content-Disposition: form-data; name=^\^"embargoDt^\^"^
+
+^
+
+undefined^
+
+------WebKitFormBoundaryuXMM1g2R8hagHxtV--^
+
+^"

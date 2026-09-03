@@ -1,10 +1,12 @@
-import { Outlet } from "react-router-dom";
+"use client";
+
+import type { ReactNode } from "react";
 import { Sidebar } from "@/components/sidebar";
 import { Topbar } from "@/components/topbar";
 import { Toaster } from "@/components/ui/sonner";
 import { useCookieBridgeListener } from "@/hooks/use-cookie-bridge";
 
-export function AppLayout() {
+export function AppLayout({ children }: { children: ReactNode }) {
   useCookieBridgeListener();
 
   return (
@@ -17,7 +19,7 @@ export function AppLayout() {
         <Topbar />
         <main id="main-content" tabIndex={-1} className="flex-1 px-4 py-5 outline-none sm:px-6 lg:px-8 lg:py-8">
           <div className="surface-enter mx-auto max-w-[1280px]">
-            <Outlet />
+            {children}
           </div>
         </main>
       </div>

@@ -16,6 +16,7 @@ export interface CreateModuleOptions {
   targetUrl: string;
   flows: FlowConfig[];
   fields: FieldConfig[];
+  preview?: ModuleConfig["preview"];
   exportName?: string;
   /** Module-specific work. Receives a logger + parsed cookies, returns rows. */
   handler: ModuleHandler;
@@ -69,6 +70,7 @@ export function createModule(opts: CreateModuleOptions): ModuleConfig {
     targetUrl: opts.targetUrl,
     flows: opts.flows,
     fields: opts.fields,
+    preview: opts.preview,
     exportName: opts.exportName ?? opts.id,
     run,
   };

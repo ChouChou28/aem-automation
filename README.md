@@ -1,13 +1,14 @@
 # Samsung AEM Automation
 
-A React + Vite control panel that clones the Samsung AEM automation desktop tool.
+A Next.js control panel for Samsung AEM automation workflows.
 Cookie-authenticated API calls, per-run activity log, and one-click Excel export —
 built around a **clonable module architecture** so new automations are config + a handler.
 
 ## Stack
 
-- **React 19** + **Vite 6** + **TypeScript**
-- **Tailwind v4** (`@tailwindcss/vite`, CSS-first `@theme`)
+- **Next.js App Router** + **React 19** + **TypeScript**
+- **Server-side AEM proxy** through `/api/aem/*`
+- **Tailwind v4** (`@tailwindcss/postcss`, CSS-first `@theme`)
 - **shadcn-style** UI primitives on Radix (`src/components/ui`)
 - **React Router v7**, object-based config (`src/router.tsx`)
 - **Zustand** for the activity log + settings stores
@@ -17,8 +18,9 @@ built around a **clonable module architecture** so new automations are config + 
 
 ```bash
 npm install
-npm run dev      # http://localhost:5173
-npm run build    # tsc -b && vite build
+npm run dev      # http://localhost:3000
+npm run build    # production Next.js build
+npm run start    # serve the production build on port 3000
 ```
 
 ## How it fits together

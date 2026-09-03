@@ -1,3 +1,5 @@
+"use client";
+
 import { toast } from "sonner";
 import { Terminal, FileSpreadsheet } from "lucide-react";
 import { Badge, type BadgeProps } from "@/components/ui/badge";

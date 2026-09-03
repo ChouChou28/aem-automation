@@ -7,7 +7,7 @@ export interface ApiRequest {
   /** A plain object is JSON-encoded; a FormData is sent as multipart as-is. */
   body?: unknown;
   headers?: Record<string, string>;
-  /** Parsed cookie jar to replay (honored by the same-origin dev proxy). */
+  /** Parsed cookie jar replayed by the same-origin Next.js server route. */
   cookies?: Cookie[];
   signal?: AbortSignal;
 }
@@ -55,20 +55,18 @@ export function extractMessage(data: unknown): string | undefined {
 }
 
 /**
- * In dev, rewrite absolute AEM URLs to the same-origin `/aem` proxy so cookie
- * replay + CORS work (see vite.config.ts). In prod the URL is left untouched
- * (a real backend / proxy must stand in for the dev server).
+ * Route all supported AEM URLs through the same-origin Next.js server. The
+ * server performs the cross-origin request, so browser CORS restrictions do
+ * not apply and the real Cookie header can be attached there.
  */
 export function resolveUrl(url: string): string {
-  if (import.meta.env.DEV) return url.replace(AEM_HOST, "/aem");
-  return url;
+  return url.replace(AEM_HOST, "/api/aem");
 }
 
 /**
  * Thin fetch wrapper that authenticates with cookies. Same-origin requests
- * carry the parsed jar on `x-replay-cookie`, which the dev proxy turns into a
- * real `Cookie:` header; the browser also includes its own cookies via
- * `credentials: "include"`.
+ * carry the parsed jar on `x-replay-cookie`, which the server route turns into
+ * a real `Cookie:` header for the upstream AEM request.
  */
 export async function apiRequest<T = unknown>(
   req: ApiRequest
@@ -76,13 +74,15 @@ export async function apiRequest<T = unknown>(
   const { method = "GET", body, headers = {}, cookies, signal } = req;
   const url = resolveUrl(req.url);
   const isForm = typeof FormData !== "undefined" && body instanceof FormData;
+  const isUrlEncoded =
+    typeof URLSearchParams !== "undefined" && body instanceof URLSearchParams;
 
   const finalHeaders: Record<string, string> = {
     Accept: "application/json, text/javascript, */*; q=0.01",
     ...headers,
   };
   // Never set Content-Type for FormData — the browser adds the boundary.
-  if (body !== undefined && !isForm) {
+  if (body !== undefined && !isForm && !isUrlEncoded) {
     finalHeaders["Content-Type"] = "application/json";
   }
   if (cookies?.length) finalHeaders["x-replay-cookie"] = toCookieHeader(cookies);
@@ -96,7 +96,9 @@ export async function apiRequest<T = unknown>(
           ? undefined
           : isForm
             ? (body as FormData)
-            : JSON.stringify(body),
+            : isUrlEncoded
+              ? (body as URLSearchParams)
+              : JSON.stringify(body),
       signal,
     });
 

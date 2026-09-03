@@ -19,6 +19,10 @@ export interface FieldConfig {
   defaultValue?: string | boolean;
   /** Mark the field as required for client-side validation. */
   required?: boolean;
+  /** Display a value without allowing direct edits (for derived values). */
+  readOnly?: boolean;
+  /** Let long derived values span the full form grid. */
+  fullWidth?: boolean;
   /** Optional extra validation; return an error string when invalid. */
   validate?: (value: string) => string | undefined;
   /** Restrict this field to specific flow ids. Omit to show for every flow. */
@@ -60,6 +64,16 @@ export interface ModuleConfig {
   targetUrl: string;
   flows: FlowConfig[];
   fields: FieldConfig[];
+  /** Optionally derive preview fields when selected input values change. */
+  preview?: {
+    dependencies: string[];
+    targets: string[];
+    resolve: (
+      values: FormValues,
+      cookies: Cookie[],
+      signal: AbortSignal
+    ) => Promise<Partial<FormValues>>;
+  };
   /** File name (without extension) used when exporting results to Excel. */
   exportName: string;
   run: (ctx: RunContext) => Promise<RunOutcome>;

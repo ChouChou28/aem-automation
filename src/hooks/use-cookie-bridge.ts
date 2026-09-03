@@ -1,32 +1,56 @@
+"use client";
+
 import { useEffect } from "react";
 import { toast } from "sonner";
 import { useSettings } from "@/store/settings";
 import { useBridge } from "@/store/bridge";
 import { useActivityLog } from "@/store/activity-log";
-import { parseCookieFile } from "@/lib/cookies";
+import { parseCookieFile, type Cookie } from "@/lib/cookies";
 
 const ORIGIN = () => window.location.origin;
 
 /** Set while a sync was triggered by an auth failure (to log when it lands). */
 let authResyncPending = false;
+let activeCookieSync: Promise<Cookie[] | null> | null = null;
+let resolveCookieSync: ((cookies: Cookie[] | null) => void) | null = null;
 
 /** Ask the extension (if installed) to push the current samsung.com cookies. */
 export function requestCookieSync() {
   window.postMessage({ source: "aem-cookie-bridge-request" }, ORIGIN());
 }
 
+/** Request fresh cookies and wait for the bridge response. Concurrent callers share one sync. */
+function waitForCookieSync(): Promise<Cookie[] | null> {
+  if (activeCookieSync) return activeCookieSync;
+  activeCookieSync = new Promise((resolve) => {
+    const timeout = window.setTimeout(() => {
+      resolveCookieSync = null;
+      activeCookieSync = null;
+      resolve(null);
+    }, 5000);
+    resolveCookieSync = (cookies) => {
+      window.clearTimeout(timeout);
+      resolveCookieSync = null;
+      activeCookieSync = null;
+      resolve(cookies);
+    };
+    requestCookieSync();
+  });
+  return activeCookieSync;
+}
+
 /**
  * React to an API authentication failure: silently re-sync cookies from the
  * extension (no popup). If the extension isn't available, notify the user.
  */
-export function handleAuthFailure() {
+export async function handleAuthFailure(): Promise<Cookie[] | null> {
   if (useBridge.getState().available) {
     toast.info("Authentication failed — re-syncing cookies…");
     useActivityLog.getState().log("warn", "Authentication failed — re-syncing cookies");
     authResyncPending = true;
     // Don't let a stale flag mislabel a later manual sync.
     setTimeout(() => (authResyncPending = false), 8000);
-    requestCookieSync();
+    return waitForCookieSync();
   } else {
     toast.error("Authentication failed", {
       description:
@@ -35,6 +59,7 @@ export function handleAuthFailure() {
     useActivityLog
       .getState()
       .log("error", "Authentication failed — cookie bridge not available");
+    return null;
   }
 }
 
@@ -69,6 +94,7 @@ export function useCookieBridgeListener() {
 
       if (msg.source === "aem-cookie-bridge-ready") {
         setAvailable(true);
+        requestCookieSync();
         return;
       }
       if (msg.source === "aem-cookie-bridge" && Array.isArray(msg.cookies)) {
@@ -76,6 +102,7 @@ export function useCookieBridgeListener() {
         setCookies(jar);
         setLastSync(jar.length);
         setAvailable(true);
+        resolveCookieSync?.(jar);
         toast.success(`Synced ${jar.length} cookies from the extension`);
         if (authResyncPending) {
           authResyncPending = false;

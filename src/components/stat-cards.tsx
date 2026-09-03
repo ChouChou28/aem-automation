@@ -1,3 +1,5 @@
+"use client";
+
 import { Activity, Table2, Cookie as CookieIcon, ScrollText } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useActivityLog, type RunStatus } from "@/store/activity-log";
